@@ -1,8 +1,9 @@
+import argparse
 import gitUtils
 import fileUtils
 
-original_repository_path = 'E:/git_history/hirescapes-front-end-original'
-new_repository_path = 'E:/git_history/hirescapes-front-end'
+original_repository_path = 'E:/git_history/golang-test-original'
+new_repository_path = 'E:/git_history/golang-test'
 
 
 def start_git_copy(src, dst):
@@ -19,4 +20,11 @@ def start_git_copy(src, dst):
 
 
 if __name__ == '__main__':
-    start_git_copy(original_repository_path, new_repository_path)
+    parser = argparse.ArgumentParser(description='''
+Copy one repository to another replacing the git user name.
+    ''')
+    parser.add_argument('src', help='original repository path')
+    parser.add_argument('dst', help='destination directory')
+    args = parser.parse_args()
+
+    start_git_copy(args.src, args.dst)
