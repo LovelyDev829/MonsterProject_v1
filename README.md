@@ -20,7 +20,7 @@ Replace `John Doe` and `johndoe@example.com` with your github connected account 
 3. Run the following command.
 
 ```bash
-py main.py </path/to/original-repository> </path/to/new-repository?
+py main.py </path/to/original-repository> </path/to/new-repository>
 ```
 
 Example:
